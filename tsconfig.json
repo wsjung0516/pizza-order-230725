@@ -19,6 +19,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "paths": { 
+      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
+    }, 
     "lib": [
       "ES2022",
       "dom"
