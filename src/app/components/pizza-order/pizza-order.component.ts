@@ -52,7 +52,7 @@ import { PizzaService } from '../pizza/pizza.service';
             class="px-2 py-1 bg-green-600 rounded-sm text-white m-2"
             (click)="onModify()"
           >
-            Modify
+            Update
           </button>
         </ng-container>
       </div>
