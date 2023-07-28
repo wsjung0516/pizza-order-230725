@@ -1,27 +1,31 @@
-# PizzaOrder230725
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](link to site)
+# SpectatorPizza211001
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
-## Development server
+## Summary
+1. The image and animation program used in this project were referenced from other sites.
+2. This program was originally developed using RxJS and NgXS (a state management program) but was redeveloped using Angular Signal.
+3. Unable to connect to the database, we applied the storage of Pizza Data to local storage.
+### Applied technology
+1. Angular: 16.1.4 
+2. Signal 
+3. RxJS: 7.8.0
+4. Tailwind: 3.3.0
+### Basic structure
+![](src/assets/img/pizza-order2.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Description of Program Source
+1. toppings.component.ts: The images were composed in SVG format, and since one type of topping can be applied multiple times, each image was arranged into five sets to distribute the toppings evenly on the dough. When a topping is selected, it is saved in a separate array. The order of storage is determined so that toppings added later are placed on top of those already placed. 
+2. pizza.component.ts: This component places the selected toppings onto the dough.
+3. pizza-order.component.ts: This component is responsible for registering or modifying the pizza.
+4. pizza-order-list.component.ts: This component displays the newly created pizzas in a list, and when one is selected, it enters modification mode.
+5. home.component.ts: This component includes pizza-order.component.ts and pizza-order-list.component.ts.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Deploy information
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. ng build --base-href "https://wsjung0516.github.io/pizza-order-230725/"
+2. ng add angular-cli-ghpages
+3. npx ngh --dir=dist/pizza-order-230725
+   if above command is not working, please refer following site --> https://github.com/angular-schule/angular-cli-ghpages

@@ -1,9 +1,7 @@
 import {
   Component,
   DestroyRef,
-  EventEmitter,
   OnInit,
-  Output,
   computed,
   effect,
   inject,
@@ -15,7 +13,6 @@ import { PizzaComponent } from '../pizza/pizza.component';
 import { ToppingsService } from '../toppings/toppings.service';
 import { Pizza } from 'src/app/models';
 import { PizzaOrderListService } from '../pizza-order-list/pizza-order-list.service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { PizzaService } from '../pizza/pizza.service';
 
 @Component({
@@ -74,9 +71,6 @@ import { PizzaService } from '../pizza/pizza.service';
   styles: [],
 })
 export class PizzaOrderComponent implements OnInit{
-  @Output() create = new EventEmitter<Pizza>();
-  @Output() update = new EventEmitter<Pizza>();
-  @Output() remove = new EventEmitter<Pizza>();
   constructor(
     private toppingsService: ToppingsService,
     private pizzaOrderListService: PizzaOrderListService,
@@ -93,8 +87,7 @@ export class PizzaOrderComponent implements OnInit{
   totalPrice = this.toppingsService.totalPrice;
   status = computed(() => this.pizzaOrderListService.pizzaOrderStatus());
   inputName = '';
-  // inputName = computed(() => this.pizzaService.pizzaName());
-  // selectedOrder = computed(() => this.pizzaOrderListService.selectedOrder());
+  // 
   ngOnInit() {
 
   }
