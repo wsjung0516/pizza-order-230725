@@ -1,7 +1,7 @@
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](link to site)
-# SpectatorPizza211001
+# PizzaOrder230725
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Summary
 1. The image and animation program used in this project were referenced from other sites.
